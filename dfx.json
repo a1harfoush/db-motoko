@@ -1,0 +1,33 @@
+{
+  "canisters": {
+    "frontend": {
+      "type": "assets",
+      "source": [
+        "build/",
+        "assets/"
+      ],
+      "assets": [
+        ["index.html", {"path": "/"}],
+        ["/assets/*", {"path": "/assets"}]
+      ],
+      "exclude": [
+        "**/*.map"
+      ],
+      "custom_domains": [
+        "atosfit.com",
+        "www.atosfit.com"
+      ]
+    },
+    "backend": {
+      "type": "motoko",
+      "main": "src/backend/main.mo"
+    }
+  },
+  "networks": {
+    "local": {
+      "bind": "127.0.0.1:8000",
+      "type": "ephemeral"
+    }
+  },
+  "version": 1
+}
